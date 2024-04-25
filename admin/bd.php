@@ -18,6 +18,5 @@ if ($conexion) {
     $lista_banners = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 } else {
     echo "La conexión no se estableció correctamente.";
-    // Puedes agregar más acciones aquí en caso de que la conexión no esté disponible
 }
 ?>

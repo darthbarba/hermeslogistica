@@ -1,0 +1,171 @@
+
+body {
+    height: 100%;
+    background-color: #58B2E5;
+}
+
+.navbar-brand img {
+  height: 60px; /* Tamaño predeterminado del logo */
+  width: auto; /* Ancho automático para mantener la proporción */
+  transition: height 0.3s ease; /* Transición suave para el cambio de tamaño */
+}
+
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 40px; 
+  }
+}
+
+
+/* BANNER */
+
+.banner{
+  background-color: #58B2E5 !important;
+}
+.banner-img {
+    position: relative;
+    background: url('images/imagen-banner2.jpg') center/cover no-repeat;
+    background-size: contain;
+    height: 500px;
+}
+
+.banner-text h1 {
+    font-family: 'Lalezar', system-ui; /* Fuente "Lalezar" */
+    font-weight: 400; /* Peso de la fuente */
+    font-style: italic; /* Estilo de la fuente */
+    text-align: center; /* Centrar horizontalmente el texto */
+    color: #0D5891; /* Color del texto */
+    margin-top: 20px; /* Espacio hacia abajo */
+    font-size: 40px; /* Tamaño de la fuente */
+}
+
+.montserrat-regular {
+    font-family: 'Montserrat', sans-serif; /* Fuente "Montserrat" */
+    font-weight: 400; /* Peso de la fuente */
+    font-style: italic;
+    text-align: center;
+    color: grey; 
+    font-size: 20px; /* Tamaño de fuente */
+    margin-top: -10px; /* Espacio hacia arriba (negativo) */
+}
+
+
+.banner-btn {
+    position: absolute;
+    top:400px; /* Ajusta la distancia desde el borde inferior según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
+
+.btn-whatsapp {
+    font-size: 20px;
+}
+
+/* SERVICIOS */
+
+    .card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            background-color: #0cb7f2; 
+            color: #010101; 
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-img-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            opacity: 2; 
+            transition: opacity 0.3s ease;
+        }
+
+        .card-title,
+        .card-text {
+            color: #010101; 
+            margin-bottom: 10px;
+            font-weight: 700px;
+        }
+
+        .card-text strong {
+            color: #010101; 
+        }
+
+        @media (max-width: 768px) {
+            .row-cols-md-4 .col {
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+        }
+
+
+/* CLIENTES */
+ 
+#clientes {
+    padding: 50px 0; 
+}
+
+
+.card-img-top {
+    height: 400px; 
+    object-fit: cover; 
+    border: solid 2px black
+}
+
+
+.card {
+
+    height: 500px; 
+    margin-bottom: 30px; 
+    padding: 20px;
+}
+
+.card-body {
+    text-align: center; 
+}
+
+/* ABOUT */
+
+body #about {
+
+    padding: 20px; 
+    text-align: left; 
+}
+#about h3 {
+    text-align: center; 
+    font-size: 24px; 
+}
+
+#about p {
+    text-align: justify; 
+    margin-bottom: 1px; 
+    margin-right: 40px;
+    margin-left: 20px;
+    font-size: 16px;
+    
+}
+
+label {
+    font-size: 17px; 
+}

@@ -18,9 +18,9 @@ $lista_clientes=$sentencia->fetchAll(PDO::FETCH_ASSOC);
 if($_POST)
 {
 
-  $nombre = filter_input(INPUT_POST, 'nombre', 513); // Equivalente a FILTER_SANITIZE_STRING
-  $correo = filter_input(INPUT_POST, 'correo', 513); // Equivalente a FILTER_SANITIZE_STRING
-  $mensaje = filter_input(INPUT_POST, 'mensaje', 513); // Equivalente a FILTER_SANITIZE_STRING
+  $nombre = filter_input(INPUT_POST, 'nombre', 513);
+  $correo = filter_input(INPUT_POST, 'correo', 513); 
+  $mensaje = filter_input(INPUT_POST, 'mensaje', 513); 
 
   if($nombre && $correo && $mensaje)
   {

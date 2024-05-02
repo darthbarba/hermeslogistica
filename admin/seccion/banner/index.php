@@ -9,8 +9,7 @@ if(isset($_GET['txtID']))
     $sentencia->execute();
 
     header("Location:index.php");
-    exit(); // Agrega exit() después de la redirección para evitar que se ejecute más código innecesario.
-}
+    exit(); 
 
 $sentencia = $conexion->prepare("SELECT * FROM `tbl_banners`");
 $sentencia->execute();

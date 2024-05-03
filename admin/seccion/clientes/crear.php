@@ -3,26 +3,27 @@ include("../../bd.php");
 
 if($_POST)
 {
-    // Verificar que los datos necesarios estén presentes y no estén vacíos
+    // Verifico que los datos necesarios estén presentes y no estén vacíos
     if(isset($_POST["descripcion"]) && !empty($_POST["descripcion"]) && isset($_FILES["imagen"]["name"]) && !empty($_FILES["imagen"]["name"])) {
         $descripcion = $_POST["descripcion"];
         $imagen = $_FILES["imagen"]["name"];
 
-        // Preparar la consulta SQL
+        // Preparola consulta SQL
         $sentencia = $conexion->prepare("INSERT INTO `tlb_clientes` (`ID`, `descripcion`, `imagen`) VALUES (NULL, :descripcion, :imagen);");
 
-        // Mover la imagen subida al directorio correspondiente
+        // Mouevo la imagen subida al directorio correspondiente
         $nombre_imagen = date("Y-m-d_H-i-s") . "_" . $imagen;
         $ruta_imagen = "../../../images/clientes/" . $nombre_imagen;
         move_uploaded_file($_FILES["imagen"]["tmp_name"], $ruta_imagen);
 
-        // Asignar valores a los parámetros y ejecutar la consulta
+        // Asigno valores a los parámetros y ejecuto la consulta
         $sentencia->bindParam(":descripcion", $descripcion);
         $sentencia->bindParam(":imagen", $nombre_imagen);
         $resultado = $sentencia->execute();
 
         if($resultado) {
-            // Redireccionar a la página de index si la inserción fue exitosa
+            // Redireccion a la página de index si la inserción fue exito
+
             header("Location: index.php");
             exit();
         } else {
